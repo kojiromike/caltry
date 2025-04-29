@@ -1,0 +1,11 @@
+{
+  "from_name": "20250429_014624869_init",
+  "table_bases": {
+    "Blog": "20250429_014624869_init",
+    "Post_tags_Many": "20250429_014624869_init",
+    "Tag": "20250429_014624869_init"
+  },
+  "backends": [
+    "sqlite"
+  ]
+}

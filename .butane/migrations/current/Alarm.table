@@ -1,11 +1,11 @@
 {
-  "name": "Post",
+  "name": "Alarm",
   "columns": [
     {
       "name": "id",
       "sqltype": {
         "KnownId": {
-          "Ty": "Int"
+          "Ty": "BigInt"
         }
       },
       "nullable": false,
@@ -15,7 +15,7 @@
       "default": null
     },
     {
-      "name": "title",
+      "name": "action",
       "sqltype": {
         "KnownId": {
           "Ty": "Text"
@@ -28,7 +28,7 @@
       "default": null
     },
     {
-      "name": "body",
+      "name": "trigger",
       "sqltype": {
         "KnownId": {
           "Ty": "Text"
@@ -41,39 +41,72 @@
       "default": null
     },
     {
-      "name": "published",
+      "name": "description",
       "sqltype": {
         "KnownId": {
-          "Ty": "Bool"
+          "Ty": "Text"
         }
       },
-      "nullable": false,
+      "nullable": true,
       "pk": false,
       "auto": false,
       "unique": false,
       "default": null
     },
     {
-      "name": "blog",
+      "name": "summary",
       "sqltype": {
         "KnownId": {
-          "Ty": "BigInt"
+          "Ty": "Text"
         }
       },
-      "nullable": false,
+      "nullable": true,
       "pk": false,
       "auto": false,
       "unique": false,
-      "default": null,
-      "reference": {
-        "Literal": {
-          "table_name": "Blog",
-          "column_name": "id"
-        }
-      }
+      "default": null
     },
     {
-      "name": "byline",
+      "name": "attendee",
+      "sqltype": {
+        "KnownId": {
+          "Ty": "Text"
+        }
+      },
+      "nullable": true,
+      "pk": false,
+      "auto": false,
+      "unique": false,
+      "default": null
+    },
+    {
+      "name": "repeat",
+      "sqltype": {
+        "KnownId": {
+          "Ty": "Int"
+        }
+      },
+      "nullable": true,
+      "pk": false,
+      "auto": false,
+      "unique": false,
+      "default": null
+    },
+    {
+      "name": "duration",
+      "sqltype": {
+        "KnownId": {
+          "Ty": "Text"
+        }
+      },
+      "nullable": true,
+      "pk": false,
+      "auto": false,
+      "unique": false,
+      "default": null
+    },
+    {
+      "name": "attach",
       "sqltype": {
         "KnownId": {
           "Ty": "Text"

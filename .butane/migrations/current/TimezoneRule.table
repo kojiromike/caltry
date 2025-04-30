@@ -1,11 +1,11 @@
 {
-  "name": "Post",
+  "name": "TimezoneRule",
   "columns": [
     {
       "name": "id",
       "sqltype": {
         "KnownId": {
-          "Ty": "Int"
+          "Ty": "BigInt"
         }
       },
       "nullable": false,
@@ -15,7 +15,20 @@
       "default": null
     },
     {
-      "name": "title",
+      "name": "dtstart",
+      "sqltype": {
+        "KnownId": {
+          "Ty": "Timestamp"
+        }
+      },
+      "nullable": false,
+      "pk": false,
+      "auto": false,
+      "unique": false,
+      "default": null
+    },
+    {
+      "name": "tzoffsetfrom",
       "sqltype": {
         "KnownId": {
           "Ty": "Text"
@@ -28,7 +41,7 @@
       "default": null
     },
     {
-      "name": "body",
+      "name": "tzoffsetto",
       "sqltype": {
         "KnownId": {
           "Ty": "Text"
@@ -41,39 +54,7 @@
       "default": null
     },
     {
-      "name": "published",
-      "sqltype": {
-        "KnownId": {
-          "Ty": "Bool"
-        }
-      },
-      "nullable": false,
-      "pk": false,
-      "auto": false,
-      "unique": false,
-      "default": null
-    },
-    {
-      "name": "blog",
-      "sqltype": {
-        "KnownId": {
-          "Ty": "BigInt"
-        }
-      },
-      "nullable": false,
-      "pk": false,
-      "auto": false,
-      "unique": false,
-      "default": null,
-      "reference": {
-        "Literal": {
-          "table_name": "Blog",
-          "column_name": "id"
-        }
-      }
-    },
-    {
-      "name": "byline",
+      "name": "rrule",
       "sqltype": {
         "KnownId": {
           "Ty": "Text"
@@ -86,10 +67,23 @@
       "default": null
     },
     {
-      "name": "likes",
+      "name": "tzname",
       "sqltype": {
         "KnownId": {
-          "Ty": "Int"
+          "Ty": "Text"
+        }
+      },
+      "nullable": true,
+      "pk": false,
+      "auto": false,
+      "unique": false,
+      "default": null
+    },
+    {
+      "name": "is_daylight",
+      "sqltype": {
+        "KnownId": {
+          "Ty": "Bool"
         }
       },
       "nullable": false,

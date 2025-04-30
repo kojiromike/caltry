@@ -1,0 +1,63 @@
+{
+  "name": "ExceptionDate",
+  "columns": [
+    {
+      "name": "id",
+      "sqltype": {
+        "KnownId": {
+          "Ty": "BigInt"
+        }
+      },
+      "nullable": false,
+      "pk": true,
+      "auto": true,
+      "unique": false,
+      "default": null
+    },
+    {
+      "name": "event_id",
+      "sqltype": {
+        "Deferred": "PK:Event"
+      },
+      "nullable": true,
+      "pk": false,
+      "auto": false,
+      "unique": false,
+      "default": null,
+      "reference": {
+        "Deferred": {
+          "Deferred": "PK:Event"
+        }
+      }
+    },
+    {
+      "name": "todo_id",
+      "sqltype": {
+        "Deferred": "PK:Todo"
+      },
+      "nullable": true,
+      "pk": false,
+      "auto": false,
+      "unique": false,
+      "default": null,
+      "reference": {
+        "Deferred": {
+          "Deferred": "PK:Todo"
+        }
+      }
+    },
+    {
+      "name": "date_time",
+      "sqltype": {
+        "KnownId": {
+          "Ty": "Timestamp"
+        }
+      },
+      "nullable": false,
+      "pk": false,
+      "auto": false,
+      "unique": false,
+      "default": null
+    }
+  ]
+}

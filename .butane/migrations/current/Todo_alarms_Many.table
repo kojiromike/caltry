@@ -1,11 +1,11 @@
 {
-  "name": "Post_tags_Many",
+  "name": "Todo_alarms_Many",
   "columns": [
     {
       "name": "owner",
       "sqltype": {
         "KnownId": {
-          "Ty": "Int"
+          "Ty": "BigInt"
         }
       },
       "nullable": false,
@@ -15,7 +15,7 @@
       "default": null,
       "reference": {
         "Literal": {
-          "table_name": "Post",
+          "table_name": "Todo",
           "column_name": "id"
         }
       }
@@ -23,9 +23,7 @@
     {
       "name": "has",
       "sqltype": {
-        "KnownId": {
-          "Ty": "Text"
-        }
+        "Deferred": "PK:Alarm"
       },
       "nullable": false,
       "pk": false,
@@ -33,9 +31,8 @@
       "unique": false,
       "default": null,
       "reference": {
-        "Literal": {
-          "table_name": "Tag",
-          "column_name": "tag"
+        "Deferred": {
+          "Deferred": "PK:Alarm"
         }
       }
     }

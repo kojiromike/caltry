@@ -1,11 +1,11 @@
 {
-  "name": "Post_tags_Many",
+  "name": "Event_attendees_Many",
   "columns": [
     {
       "name": "owner",
       "sqltype": {
         "KnownId": {
-          "Ty": "Int"
+          "Ty": "BigInt"
         }
       },
       "nullable": false,
@@ -15,7 +15,7 @@
       "default": null,
       "reference": {
         "Literal": {
-          "table_name": "Post",
+          "table_name": "Event",
           "column_name": "id"
         }
       }
@@ -23,7 +23,7 @@
     {
       "name": "has",
       "sqltype": {
-        "Deferred": "PK:Tag"
+        "Deferred": "PK:Attendee"
       },
       "nullable": false,
       "pk": false,
@@ -32,7 +32,7 @@
       "default": null,
       "reference": {
         "Deferred": {
-          "Deferred": "PK:Tag"
+          "Deferred": "PK:Attendee"
         }
       }
     }

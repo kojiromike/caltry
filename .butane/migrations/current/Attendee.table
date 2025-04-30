@@ -1,11 +1,11 @@
 {
-  "name": "Post",
+  "name": "Attendee",
   "columns": [
     {
       "name": "id",
       "sqltype": {
         "KnownId": {
-          "Ty": "Int"
+          "Ty": "BigInt"
         }
       },
       "nullable": false,
@@ -15,7 +15,7 @@
       "default": null
     },
     {
-      "name": "title",
+      "name": "cal_address",
       "sqltype": {
         "KnownId": {
           "Ty": "Text"
@@ -28,49 +28,7 @@
       "default": null
     },
     {
-      "name": "body",
-      "sqltype": {
-        "KnownId": {
-          "Ty": "Text"
-        }
-      },
-      "nullable": false,
-      "pk": false,
-      "auto": false,
-      "unique": false,
-      "default": null
-    },
-    {
-      "name": "published",
-      "sqltype": {
-        "KnownId": {
-          "Ty": "Bool"
-        }
-      },
-      "nullable": false,
-      "pk": false,
-      "auto": false,
-      "unique": false,
-      "default": null
-    },
-    {
-      "name": "blog",
-      "sqltype": {
-        "Deferred": "PK:Blog"
-      },
-      "nullable": false,
-      "pk": false,
-      "auto": false,
-      "unique": false,
-      "default": null,
-      "reference": {
-        "Deferred": {
-          "Deferred": "PK:Blog"
-        }
-      }
-    },
-    {
-      "name": "byline",
+      "name": "cn",
       "sqltype": {
         "KnownId": {
           "Ty": "Text"
@@ -83,13 +41,91 @@
       "default": null
     },
     {
-      "name": "likes",
+      "name": "cutype",
       "sqltype": {
         "KnownId": {
-          "Ty": "Int"
+          "Ty": "Text"
         }
       },
-      "nullable": false,
+      "nullable": true,
+      "pk": false,
+      "auto": false,
+      "unique": false,
+      "default": null
+    },
+    {
+      "name": "member",
+      "sqltype": {
+        "KnownId": {
+          "Ty": "Text"
+        }
+      },
+      "nullable": true,
+      "pk": false,
+      "auto": false,
+      "unique": false,
+      "default": null
+    },
+    {
+      "name": "role",
+      "sqltype": {
+        "KnownId": {
+          "Ty": "Text"
+        }
+      },
+      "nullable": true,
+      "pk": false,
+      "auto": false,
+      "unique": false,
+      "default": null
+    },
+    {
+      "name": "partstat",
+      "sqltype": {
+        "KnownId": {
+          "Ty": "Text"
+        }
+      },
+      "nullable": true,
+      "pk": false,
+      "auto": false,
+      "unique": false,
+      "default": null
+    },
+    {
+      "name": "rsvp",
+      "sqltype": {
+        "KnownId": {
+          "Ty": "Bool"
+        }
+      },
+      "nullable": true,
+      "pk": false,
+      "auto": false,
+      "unique": false,
+      "default": null
+    },
+    {
+      "name": "delegated_to",
+      "sqltype": {
+        "KnownId": {
+          "Ty": "Text"
+        }
+      },
+      "nullable": true,
+      "pk": false,
+      "auto": false,
+      "unique": false,
+      "default": null
+    },
+    {
+      "name": "delegated_from",
+      "sqltype": {
+        "KnownId": {
+          "Ty": "Text"
+        }
+      },
+      "nullable": true,
       "pk": false,
       "auto": false,
       "unique": false,
